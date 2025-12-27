@@ -216,7 +216,7 @@ const overdueOnly = getOverdueRequests(requests);
 
 ## Benefits
 
-1. **Consistent Logic**: Same detection logic everywhere
+ 1. **Consistent Logic**: Same detection logic everywhere
 2. **Visual Clarity**: Red indicators make overdue items obvious
 3. **Multiple Views**: Overdue shown in Kanban, Calendar, and List
 4. **Filtering**: Easy to filter and find overdue requests
