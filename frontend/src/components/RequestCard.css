@@ -1,0 +1,181 @@
+.request-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: grab;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.request-card:active {
+  cursor: grabbing;
+}
+
+.request-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.request-card.overdue {
+  border-left: 4px solid #dc3545;
+  background: #fff5f5;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.2);
+}
+
+.request-card.updating {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  line-height: 1.3;
+}
+
+.priority-badge {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-body {
+  margin-bottom: 10px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.card-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.card-value {
+  color: #333;
+  text-align: right;
+  max-width: 60%;
+  word-break: break-word;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.type-badge.corrective {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.type-badge.preventive {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.overdue-text {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.card-footer {
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.technician-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.technician-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.technician-name {
+  font-size: 12px;
+  color: #495057;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-technician {
+  font-size: 11px;
+  color: #999;
+  font-style: italic;
+}
+
+.overdue-indicator {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 16px;
+  animation: pulse 2s infinite;
+}
+
+.team-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.team-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+

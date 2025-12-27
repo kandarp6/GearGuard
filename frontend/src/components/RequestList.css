@@ -1,0 +1,242 @@
+.request-list {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.request-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.request-list-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.request-list-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.overdue-badge-large {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #dc3545;
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.overdue-count {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+}
+
+.request-list-loading {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.request-list-error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.request-table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.request-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.request-table thead {
+  background: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.request-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.request-table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  transition: background 0.2s;
+}
+
+.request-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.request-table tbody tr.overdue-row {
+  background: #fff5f5;
+  border-left: 4px solid #dc3545;
+}
+
+.request-table tbody tr.overdue-row:hover {
+  background: #ffe5e5;
+}
+
+.request-table td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #495057;
+}
+
+.request-subject {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.overdue-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #dc3545;
+  color: white;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.type-badge.corrective {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.type-badge.preventive {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.status-badge,
+.priority-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+}
+
+.overdue-date {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.team-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.team-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+  font-style: italic;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+  .request-table-container {
+    overflow-x: auto;
+  }
+
+  .request-table {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  .request-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .request-list-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
