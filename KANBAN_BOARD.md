@@ -107,6 +107,7 @@ cd frontend
 npm install
 ```
 
+
 Dependencies added:
 - `@dnd-kit/core` - Core drag and drop functionality
 - `@dnd-kit/sortable` - Sortable list support

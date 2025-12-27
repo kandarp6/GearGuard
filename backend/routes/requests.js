@@ -94,10 +94,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-/**
- * Check if a request is overdue
- * Conditions: scheduled_date < today AND status NOT IN ('Repaired', 'Scrap')
- */
+
 function isRequestOverdue(request) {
   if (!request.scheduled_date) {
     return false;
