@@ -129,7 +129,7 @@ router.patch('/:id/scrap', async (req, res) => {
       WHERE id = ?
     `).run(updated_at, req.params.id);
 
-    // Log system note
+    
     const noteMessage = `Equipment "${existing.name}" (ID: ${existing.id}) manually marked as Scrapped`;
     await db.prepare(`
       INSERT INTO system_notes (entity_type, entity_id, note_type, message, created_at)

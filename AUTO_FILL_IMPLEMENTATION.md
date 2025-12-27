@@ -150,7 +150,7 @@ Matches backend logic exactly:
 
 ## Status
 
-- Initial status is always "New" (enforced by backend)
+- Initial status is always "New" 
 - Cannot be changed during creation
 - Set automatically by API
 

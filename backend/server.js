@@ -4,7 +4,7 @@ require('dotenv').config();
 
 // Initialize database (async initialization)
 require('./database/db');
-// Seed will run automatically when db is ready
+
 setTimeout(() => {
   require('./database/seed');
 }, 1000);
@@ -30,7 +30,6 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'GearGuard API is running' });
 });
 
-// Start server
 app.listen(PORT, () => {
   console.log(`🚀 GearGuard API server running on port ${PORT}`);
 });

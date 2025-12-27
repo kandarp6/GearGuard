@@ -68,8 +68,6 @@ router.get('/stats', async (req, res) => {
       }
     });
 
-    // Calculate equipment with frequent breakdowns
-    // Count requests per equipment (only Corrective requests count as breakdowns)
     const equipmentBreakdowns = {};
     allRequests.forEach(request => {
       if (request.type === 'Corrective' && request.equipment_id && request.equipment_name) {
@@ -104,7 +102,6 @@ router.get('/stats', async (req, res) => {
       'Scrap': allRequests.filter(r => r.status === 'Scrap').length,
     };
 
-    // Get equipment and teams count
     const equipmentCount = await db.prepare('SELECT COUNT(*) as count FROM equipment WHERE status = ?').get('Active');
     const teamsCount = await db.prepare('SELECT COUNT(*) as count FROM maintenance_teams').get();
 
